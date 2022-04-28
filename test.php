@@ -5,7 +5,7 @@ const TEMPLATE = 'example.twig';
 /**
  * @return bool true if contents are identical (not desired), false if they differ (desired)
  */
-function test(\Twig\Environment $twig): int {
+function test(\Twig\Environment $twig): bool {
     // Render the template
     $renderA = $twig->render(TEMPLATE);
 
