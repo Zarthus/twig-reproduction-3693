@@ -1,0 +1,16 @@
+name: CI
+on: [push]
+
+jobs:
+    Good:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - name: Install composer dependencies
+              uses: php-actions/composer@v6
+              with:
+                  php_version: "8.1"
+                  command: 'install'
+            - name: Run Bad
+              run: |
+                  composer run bad

@@ -1,0 +1,16 @@
+{
+    "require": {
+        "php": ">=8.1",
+        "twig/twig": "^3.3"
+    },
+    "autoload": {
+        "files": [
+            "test.php",
+            "TwigLoaderPatch.php"
+        ]
+    },
+    "scripts": {
+        "good": "@php fixed.php",
+        "bad": "@php reproduction.php"
+    }
+}
